@@ -1,5 +1,6 @@
 type: runtime
 startup: env GO111MODULE=on go build -o goq
 entrypoint: ./goq
+http_proxy: 3000
 branch:
   master: null

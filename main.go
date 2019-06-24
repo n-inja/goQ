@@ -62,5 +62,5 @@ func main() {
 	})
 
 	server := traqbot.NewBotServer(vt, handlers)
-	log.Fatal(server.ListenAndServe(":80"))
+	log.Fatal(server.ListenAndServe(":3000"))
 }
