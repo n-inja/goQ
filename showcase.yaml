@@ -1,5 +1,5 @@
 type: runtime
-startup: ./init.sh
+startup: env GO111MODULE=on go build -o goq
 entrypoint: ./goq
 branch:
   master: null
