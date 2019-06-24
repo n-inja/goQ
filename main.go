@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/otiai10/opengraph"
 	"github.com/traPtitech/traq-bot"
 	"github.com/traPtitech/traq-client"
@@ -42,7 +44,7 @@ func main() {
 	vt := os.Getenv("VERIFICATION_TOKEN")
 	at := os.Getenv("ACCESS_TOKEN")
 	userID := os.Getenv("USER_ID")
-	client := traq.NewClient("q.trap.jp", at)
+	client := traq.NewClient("https://q.trap.jp", at)
 
 	handlers := traqbot.EventHandlers{}
 	handlers.SetMessageCreatedHandler(func(payload *traqbot.MessageCreatedPayload) {
@@ -58,7 +60,10 @@ func main() {
 			message += m
 		}
 
-		client.PostMessage(payload.Message.ChannelID, message)
+		_, err := client.PostMessage(payload.Message.ChannelID, message)
+		if err != nil {
+			log.Println(err)
+		}
 	})
 
 	server := traqbot.NewBotServer(vt, handlers)
