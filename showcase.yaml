@@ -1,0 +1,5 @@
+type: runtime
+startup: ./init.sh
+entrypoint: ./goq
+branch:
+  master: null
