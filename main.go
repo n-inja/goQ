@@ -32,6 +32,7 @@ func getOGP(rawURL string) string {
 	ogp, err := opengraph.Fetch(rawURL)
 
 	if err != nil {
+		log.Println(err)
 		return ""
 	}
 
