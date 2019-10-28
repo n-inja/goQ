@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/otiai10/opengraph"
 	"github.com/traPtitech/traq-bot"
+	"github.com/traPtitech/traq-client"
 
 	"log"
 	"os"
