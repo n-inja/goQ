@@ -3,7 +3,6 @@ package main
 import (
 	"github.com/otiai10/opengraph"
 	"github.com/traPtitech/traq-bot"
-	"github.com/traPtitech/traq-client"
 
 	"log"
 	"os"
@@ -51,6 +50,10 @@ func main() {
 		}
 
 		URLs := extractURL(payload.Message.Text)
+		if len(URLs) == 0 {
+			return
+		}
+
 		message := ""
 
 		for _, URL := range URLs {
