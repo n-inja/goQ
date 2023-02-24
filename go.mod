@@ -9,5 +9,5 @@ require (
 	github.com/stretchr/testify v1.3.0 // indirect
 	github.com/traPtitech/traq-bot v1.0.1
 	github.com/traPtitech/traq-client v0.0.0-20190518154107-80656676615e
-	golang.org/x/net v0.0.0-20190620200207-3b0461eec859 // indirect
+	golang.org/x/net v0.7.0 // indirect
 )
